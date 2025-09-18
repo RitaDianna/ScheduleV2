@@ -6,6 +6,23 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F302702C2E7C29F6000E6FBD /* EventKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302702B2E7C29F6000E6FBD /* EventKitService.swift */; };
+		F302702E2E7C2A15000E6FBD /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302702D2E7C2A15000E6FBD /* ScheduleService.swift */; };
+		F30270302E7C2A7B000E6FBD /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302702F2E7C2A7B000E6FBD /* SidebarView.swift */; };
+		F30270342E7C2AB7000E6FBD /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30270332E7C2AB7000E6FBD /* ScheduleView.swift */; };
+		F302703D2E7C2B5D000E6FBD /* ModernUIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302703C2E7C2B5D000E6FBD /* ModernUIComponents.swift */; };
+		F302703F2E7C2B7E000E6FBD /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302703E2E7C2B7E000E6FBD /* DateExtensions.swift */; };
+		F30270412E7C2BC6000E6FBD /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30270402E7C2BC6000E6FBD /* ScheduleItem.swift */; };
+		F30270432E7C2BF7000E6FBD /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30270422E7C2BF7000E6FBD /* AppViewModel.swift */; };
+		F30270472E7C2C78000E6FBD /* AddScheduleItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30270462E7C2C78000E6FBD /* AddScheduleItemView.swift */; };
+		F30270492E7C2CBA000E6FBD /* SettingsInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30270482E7C2CBA000E6FBD /* SettingsInputView.swift */; };
+		F302704C2E7C3152000E6FBD /* WeekCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302704B2E7C3152000E6FBD /* WeekCalendarView.swift */; };
+		F302704E2E7C316D000E6FBD /* MonthCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302704D2E7C316D000E6FBD /* MonthCalendarView.swift */; };
+		F30270502E7C3181000E6FBD /* YearCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302704F2E7C3181000E6FBD /* YearCalendarView.swift */; };
+		F30270522E7C3491000E6FBD /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30270512E7C3491000E6FBD /* CalendarHeaderView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F3BBBB012E7BFDB8002501DE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +41,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F302702B2E7C29F6000E6FBD /* EventKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventKitService.swift; sourceTree = "<group>"; };
+		F302702D2E7C2A15000E6FBD /* ScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
+		F302702F2E7C2A7B000E6FBD /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		F30270332E7C2AB7000E6FBD /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		F302703C2E7C2B5D000E6FBD /* ModernUIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernUIComponents.swift; sourceTree = "<group>"; };
+		F302703E2E7C2B7E000E6FBD /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		F30270402E7C2BC6000E6FBD /* ScheduleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleItem.swift; sourceTree = "<group>"; };
+		F30270422E7C2BF7000E6FBD /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		F30270462E7C2C78000E6FBD /* AddScheduleItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleItemView.swift; sourceTree = "<group>"; };
+		F30270482E7C2CBA000E6FBD /* SettingsInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInputView.swift; sourceTree = "<group>"; };
+		F302704B2E7C3152000E6FBD /* WeekCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCalendarView.swift; sourceTree = "<group>"; };
+		F302704D2E7C316D000E6FBD /* MonthCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCalendarView.swift; sourceTree = "<group>"; };
+		F302704F2E7C3181000E6FBD /* YearCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearCalendarView.swift; sourceTree = "<group>"; };
+		F30270512E7C3491000E6FBD /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
 		F3BBBAEF2E7BFDB7002501DE /* ScheduleV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BBBB002E7BFDB8002501DE /* ScheduleV2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScheduleV2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BBBB0A2E7BFDB8002501DE /* ScheduleV2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScheduleV2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,9 +103,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F30270232E7C1947000E6FBD /* Modual */ = {
+			isa = PBXGroup;
+			children = (
+				F302702B2E7C29F6000E6FBD /* EventKitService.swift */,
+				F302702D2E7C2A15000E6FBD /* ScheduleService.swift */,
+				F30270402E7C2BC6000E6FBD /* ScheduleItem.swift */,
+				F30270422E7C2BF7000E6FBD /* AppViewModel.swift */,
+				F30270482E7C2CBA000E6FBD /* SettingsInputView.swift */,
+			);
+			path = Modual;
+			sourceTree = "<group>";
+		};
+		F302703B2E7C2B3F000E6FBD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F302703C2E7C2B5D000E6FBD /* ModernUIComponents.swift */,
+				F302703E2E7C2B7E000E6FBD /* DateExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F302704A2E7C3067000E6FBD /* ScheduleView */ = {
+			isa = PBXGroup;
+			children = (
+				F30270332E7C2AB7000E6FBD /* ScheduleView.swift */,
+				F302702F2E7C2A7B000E6FBD /* SidebarView.swift */,
+				F30270462E7C2C78000E6FBD /* AddScheduleItemView.swift */,
+				F302704B2E7C3152000E6FBD /* WeekCalendarView.swift */,
+				F302704D2E7C316D000E6FBD /* MonthCalendarView.swift */,
+				F302704F2E7C3181000E6FBD /* YearCalendarView.swift */,
+				F30270512E7C3491000E6FBD /* CalendarHeaderView.swift */,
+			);
+			path = ScheduleView;
+			sourceTree = "<group>";
+		};
 		F3BBBAE62E7BFDB7002501DE = {
 			isa = PBXGroup;
 			children = (
+				F302704A2E7C3067000E6FBD /* ScheduleView */,
+				F302703B2E7C2B3F000E6FBD /* Extensions */,
+				F30270232E7C1947000E6FBD /* Modual */,
 				F3BBBAF12E7BFDB7002501DE /* ScheduleV2 */,
 				F3BBBB032E7BFDB8002501DE /* ScheduleV2Tests */,
 				F3BBBB0D2E7BFDB8002501DE /* ScheduleV2UITests */,
@@ -236,6 +305,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30270472E7C2C78000E6FBD /* AddScheduleItemView.swift in Sources */,
+				F30270522E7C3491000E6FBD /* CalendarHeaderView.swift in Sources */,
+				F302702E2E7C2A15000E6FBD /* ScheduleService.swift in Sources */,
+				F302704E2E7C316D000E6FBD /* MonthCalendarView.swift in Sources */,
+				F30270432E7C2BF7000E6FBD /* AppViewModel.swift in Sources */,
+				F30270302E7C2A7B000E6FBD /* SidebarView.swift in Sources */,
+				F302704C2E7C3152000E6FBD /* WeekCalendarView.swift in Sources */,
+				F302702C2E7C29F6000E6FBD /* EventKitService.swift in Sources */,
+				F302703F2E7C2B7E000E6FBD /* DateExtensions.swift in Sources */,
+				F30270492E7C2CBA000E6FBD /* SettingsInputView.swift in Sources */,
+				F30270342E7C2AB7000E6FBD /* ScheduleView.swift in Sources */,
+				F30270502E7C3181000E6FBD /* YearCalendarView.swift in Sources */,
+				F302703D2E7C2B5D000E6FBD /* ModernUIComponents.swift in Sources */,
+				F30270412E7C2BC6000E6FBD /* ScheduleItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +480,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScheduleV2/Preview Content\"";
+				DEVELOPMENT_TEAM = 8NQM3NZLB8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -422,6 +506,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScheduleV2/Preview Content\"";
+				DEVELOPMENT_TEAM = 8NQM3NZLB8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
