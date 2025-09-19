@@ -1,20 +1,21 @@
-
 import SwiftUI
 
-// 【新增】: 全新的、可复用的日历页眉，仿系统风格
+/// 全新的、可复用的日历页眉，仿系统风格
+/// 它现在从环境中获取所有所需的状态
 struct CalendarHeaderView: View {
-    @Binding var currentDate: Date
-    let viewMode: CalendarViewMode
+    // 【修复】 1. 从环境中获取 AppState
+    @EnvironmentObject private var appState: AppState
     
+    // 【修复】 2. title 计算属性现在使用 appState
     private var title: String {
         let formatter = DateFormatter()
-        switch viewMode {
+        switch appState.calendarViewMode {
         case .week, .month:
             formatter.dateFormat = "MMMM yyyy"
         case .year:
             formatter.dateFormat = "yyyy"
         }
-        return formatter.string(from: currentDate)
+        return formatter.string(from: appState.currentDate)
     }
     
     var body: some View {
@@ -33,7 +34,8 @@ struct CalendarHeaderView: View {
                     .buttonStyle(.plain)
                     
                     Button("Today") {
-                        currentDate = Date()
+                        // 【修复】 3. 直接修改 appState 中的 currentDate
+                        appState.currentDate = Date()
                     }
                     .buttonStyle(.borderless)
                     
@@ -46,19 +48,20 @@ struct CalendarHeaderView: View {
             .padding()
 
             // 只有周视图和月视图需要显示星期几
-            if viewMode == .week || viewMode == .month {
+            if appState.calendarViewMode == .week || appState.calendarViewMode == .month {
                 HStack(spacing: 0) {
-                    if viewMode == .week {
+                    // 周视图的左侧时间轴占位
+                    if appState.calendarViewMode == .week {
                         Spacer().frame(width: 60)
                     }
-                    ForEach(currentDate.getWeekDates(), id: \.self) { day in
+                    ForEach(appState.currentDate.getWeekDates(), id: \.self) { day in
                         VStack {
                             Text(day.getWeekdayShortString())
                                 .font(.caption)
                                 .foregroundColor(.secondary)
                             
                             // 只有周视图显示日期数字
-                            if viewMode == .week {
+                            if appState.calendarViewMode == .week {
                                 Text(day.getDayString())
                                     .font(.title3)
                                     .fontWeight(Calendar.current.isDateInToday(day) ? .bold : .regular)
@@ -74,9 +77,10 @@ struct CalendarHeaderView: View {
         .background(.bar)
     }
     
+    /// 根据当前视图模式更改日期
     private func changeDate(by value: Int) {
         let component: Calendar.Component
-        switch viewMode {
+        switch appState.calendarViewMode {
         case .week:
             component = .weekOfYear
         case .month:
@@ -85,8 +89,10 @@ struct CalendarHeaderView: View {
             component = .year
         }
         
-        if let newDate = Calendar.current.date(byAdding: component, value: value, to: currentDate) {
-            currentDate = newDate
+        if let newDate = Calendar.current.date(byAdding: component, value: value, to: appState.currentDate) {
+            // 【修复】 4. 修改 appState 中的 currentDate
+            appState.currentDate = newDate
         }
     }
 }
+

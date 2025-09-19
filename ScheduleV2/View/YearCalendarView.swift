@@ -1,25 +1,20 @@
 import SwiftUI
 import SwiftData
 
-// 【重大更新】: 全功能的年视图
+/// 年视图
 struct YearCalendarView: View {
-    @Binding var currentDate: Date
-    private let calendar = Calendar.current
-    private let months: [Date]
-    
-    init(currentDate: Binding<Date>) {
-        self._currentDate = currentDate
-        self.months = currentDate.wrappedValue.getMonthsInYear()
-    }
+    @EnvironmentObject private var appState: AppState
 
     var body: some View {
         VStack(spacing: 0) {
-            CalendarHeaderView(currentDate: $currentDate, viewMode: .year)
+            // 【修复】调用无参数的 CalendarHeaderView
+            CalendarHeaderView()
             
             ScrollView {
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 4), spacing: 20) {
-                    ForEach(months, id: \.self) { month in
-                        YearMonthView(month: month, currentDate: $currentDate)
+                    // 直接从 appState 获取当前年份的月份列表
+                    ForEach(appState.currentDate.getMonthsInYear(), id: \.self) { month in
+                        YearMonthView(month: month)
                     }
                 }
                 .padding()
@@ -28,16 +23,17 @@ struct YearCalendarView: View {
     }
 }
 
-// 年视图中的单月视图
-struct YearMonthView: View {
+
+// MARK: - 子视图
+
+/// 年视图中的单月视图
+private struct YearMonthView: View {
     let month: Date
-    @Binding var currentDate: Date
     private let days: [Date]
     private let calendar = Calendar.current
     
-    init(month: Date, currentDate: Binding<Date>) {
+    init(month: Date) {
         self.month = month
-        self._currentDate = currentDate
         self.days = month.getDaysInMonth()
     }
     
@@ -59,15 +55,17 @@ struct YearMonthView: View {
         }
     }
     
+    /// 根据日期计算前景（文字）颜色
     private func foregroundColor(for day: Date) -> Color {
         if calendar.isDateInToday(day) { return .white }
-        if calendar.isDate(day, equalTo: month, toGranularity: .month) { return .primary }
-        return .secondary
+        // 如果日期不属于当前月份，则显示为灰色
+        if !calendar.isDate(day, equalTo: month, toGranularity: .month) { return .secondary }
+        return .primary
     }
     
+    /// 根据日期计算背景颜色
     private func backgroundColor(for day: Date) -> Color {
-        if calendar.isDateInToday(day) { return .red }
-        return .clear
+        calendar.isDateInToday(day) ? Color.accentColor : Color.clear
     }
 }
 

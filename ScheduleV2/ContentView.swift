@@ -1,51 +1,53 @@
+import SwiftData
 import SwiftUI
 
-// 应用的根视图，负责搭建整体布局
 struct ContentView: View {
-    @StateObject private var viewModel = AppViewModel()
-    @Environment(\.modelContext) private var modelContext
+    @EnvironmentObject private var appState: AppState
+    @EnvironmentObject private var scheduleViewModel: ScheduleViewModel
+    @Query(sort: \ScheduleCategory.name) private var categories: [ScheduleCategory]
 
     var body: some View {
-        NavigationSplitView {
-            SidebarView()
+        NavigationSplitView {  // 创建多分栏视图
+            LeftSidebarView()  // 左边侧边栏
         } detail: {
             ZStack {
-                switch viewModel.selection {
+                switch appState.selection {
                 case .schedule:
-                    ScheduleView(currentDate: $viewModel.currentDate)
-                case .settings:
-                    SettingsInputView(modelContext: modelContext)
+                    ScheduleView()  // 日程调度中心视图
+                case .DataSource:
+                    SettingsView()  // 数据源获取模块视图
+                case .Setting:
+                    CategorySettingsView()  // 分类管理器视图
                 case .none:
-                    Text("请选择一个项目").font(.title).foregroundColor(.secondary)
+                    Text("请选择一个项目")
+                        .font(.title)
+                        .foregroundColor(.secondary)
                 }
             }
-            .animation(.easeInOut(duration: 0.3), value: viewModel.selection)
-            .animation(.easeInOut(duration: 0.3), value: viewModel.calendarViewMode)
+            .animation(.easeInOut(duration: 0.3), value: appState.selection)
         }
-        .environmentObject(viewModel)
         .frame(minWidth: 950, minHeight: 600)
-        .alert("提示", isPresented: $viewModel.isShowingAlert) {
+        // 【修复】 修正 alert 的调用语法
+        .alert("提示", isPresented: $scheduleViewModel.isShowingAlert) {
             Button("好", role: .cancel) { }
         } message: {
-            Text(viewModel.alertMessage ?? "")
+            Text(scheduleViewModel.alertMessage ?? "未知错误")
         }
-        // 【修复】: 更新 .popover 的调用方式以匹配新的 init 方法
-        .popover(isPresented: $viewModel.isShowingAddPopover, arrowEdge: .bottom) {
-            AddScheduleItemPopoverView(
-                startDate: viewModel.newEventStartDate,
-                endDate: viewModel.newEventEndDate,
-                onClose: {
-                    viewModel.isShowingAddPopover = false
-                }
-            )
+        // 【修复】 Popover 的调用现在变得非常简洁
+        .popover(item: $appState.popoverContext) { _ in
+            CustomPopoverView()
         }
-        .sheet(item: $viewModel.itemToEdit) { item in
-            AddScheduleItemView(item: item)
+        .sheet(isPresented: $appState.isShowingAddItemSheet) {
+            AddScheduleItemView(categories: categories, itemToEdit: nil)
+        }
+        .sheet(item: $appState.itemToEdit) { item in
+            AddScheduleItemView(categories: categories, itemToEdit: item)
         }
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: ScheduleItem.self, inMemory: true)
+        .modelContainer(for: [ScheduleItem.self, ScheduleCategory.self], inMemory: true)
+        .environmentObject(AppState())
 }

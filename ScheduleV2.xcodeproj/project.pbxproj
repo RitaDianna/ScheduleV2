@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F302702C2E7C29F6000E6FBD /* EventKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302702B2E7C29F6000E6FBD /* EventKitService.swift */; };
-		F302702E2E7C2A15000E6FBD /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302702D2E7C2A15000E6FBD /* ScheduleService.swift */; };
-		F30270302E7C2A7B000E6FBD /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302702F2E7C2A7B000E6FBD /* SidebarView.swift */; };
-		F30270342E7C2AB7000E6FBD /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30270332E7C2AB7000E6FBD /* ScheduleView.swift */; };
-		F302703D2E7C2B5D000E6FBD /* ModernUIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302703C2E7C2B5D000E6FBD /* ModernUIComponents.swift */; };
-		F302703F2E7C2B7E000E6FBD /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302703E2E7C2B7E000E6FBD /* DateExtensions.swift */; };
-		F30270412E7C2BC6000E6FBD /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30270402E7C2BC6000E6FBD /* ScheduleItem.swift */; };
-		F30270432E7C2BF7000E6FBD /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30270422E7C2BF7000E6FBD /* AppViewModel.swift */; };
-		F30270472E7C2C78000E6FBD /* AddScheduleItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30270462E7C2C78000E6FBD /* AddScheduleItemView.swift */; };
-		F30270492E7C2CBA000E6FBD /* SettingsInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30270482E7C2CBA000E6FBD /* SettingsInputView.swift */; };
-		F302704C2E7C3152000E6FBD /* WeekCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302704B2E7C3152000E6FBD /* WeekCalendarView.swift */; };
-		F302704E2E7C316D000E6FBD /* MonthCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302704D2E7C316D000E6FBD /* MonthCalendarView.swift */; };
-		F30270502E7C3181000E6FBD /* YearCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302704F2E7C3181000E6FBD /* YearCalendarView.swift */; };
-		F30270522E7C3491000E6FBD /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30270512E7C3491000E6FBD /* CalendarHeaderView.swift */; };
+		F304CFD72E7C4E67009DA2E3 /* GetScheduleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304CFD62E7C4E67009DA2E3 /* GetScheduleProtocol.swift */; };
+		F304CFD92E7C4E83009DA2E3 /* CalendarExporterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304CFD82E7C4E83009DA2E3 /* CalendarExporterProtocol.swift */; };
+		F304CFDB2E7C4E9C009DA2E3 /* GetScheduleFormWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304CFDA2E7C4E9C009DA2E3 /* GetScheduleFormWebService.swift */; };
+		F304CFDD2E7C4EBB009DA2E3 /* EventKitExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304CFDC2E7C4EBB009DA2E3 /* EventKitExporter.swift */; };
+		F304CFDF2E7C4ED6009DA2E3 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304CFDE2E7C4ED6009DA2E3 /* AppState.swift */; };
+		F304CFE12E7C4EF0009DA2E3 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304CFE02E7C4EF0009DA2E3 /* ScheduleViewModel.swift */; };
+		F304CFE52E7C4F30009DA2E3 /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304CFE42E7C4F30009DA2E3 /* ScheduleItem.swift */; };
+		F304CFE72E7C50CC009DA2E3 /* CodableColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304CFE62E7C50CC009DA2E3 /* CodableColor.swift */; };
+		F304CFEB2E7C5354009DA2E3 /* ScheduleCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304CFEA2E7C5354009DA2E3 /* ScheduleCategory.swift */; };
+		F304CFF32E7C5670009DA2E3 /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304CFF22E7C5670009DA2E3 /* Date+Helpers.swift */; };
+		F329ADEB2E7D541000E4DD05 /* ScheduleV2LogSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F329ADEA2E7D541000E4DD05 /* ScheduleV2LogSystem.swift */; };
+		F34B50712E7C638800A04424 /* CalendarViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B50702E7C638800A04424 /* CalendarViewMode.swift */; };
+		F34B50732E7C64A300A04424 /* SidebarSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B50722E7C64A300A04424 /* SidebarSelection.swift */; };
+		F34B50752E7C672A00A04424 /* DataSourceSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B50742E7C672A00A04424 /* DataSourceSettingsViewModel.swift */; };
+		F34B50772E7C680500A04424 /* CourseInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B50762E7C680500A04424 /* CourseInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,20 +42,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F302702B2E7C29F6000E6FBD /* EventKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventKitService.swift; sourceTree = "<group>"; };
-		F302702D2E7C2A15000E6FBD /* ScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
-		F302702F2E7C2A7B000E6FBD /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
-		F30270332E7C2AB7000E6FBD /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
-		F302703C2E7C2B5D000E6FBD /* ModernUIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernUIComponents.swift; sourceTree = "<group>"; };
-		F302703E2E7C2B7E000E6FBD /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
-		F30270402E7C2BC6000E6FBD /* ScheduleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleItem.swift; sourceTree = "<group>"; };
-		F30270422E7C2BF7000E6FBD /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
-		F30270462E7C2C78000E6FBD /* AddScheduleItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleItemView.swift; sourceTree = "<group>"; };
-		F30270482E7C2CBA000E6FBD /* SettingsInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInputView.swift; sourceTree = "<group>"; };
-		F302704B2E7C3152000E6FBD /* WeekCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCalendarView.swift; sourceTree = "<group>"; };
-		F302704D2E7C316D000E6FBD /* MonthCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCalendarView.swift; sourceTree = "<group>"; };
-		F302704F2E7C3181000E6FBD /* YearCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearCalendarView.swift; sourceTree = "<group>"; };
-		F30270512E7C3491000E6FBD /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
+		F304CFD62E7C4E67009DA2E3 /* GetScheduleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetScheduleProtocol.swift; sourceTree = "<group>"; };
+		F304CFD82E7C4E83009DA2E3 /* CalendarExporterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExporterProtocol.swift; sourceTree = "<group>"; };
+		F304CFDA2E7C4E9C009DA2E3 /* GetScheduleFormWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetScheduleFormWebService.swift; sourceTree = "<group>"; };
+		F304CFDC2E7C4EBB009DA2E3 /* EventKitExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventKitExporter.swift; sourceTree = "<group>"; };
+		F304CFDE2E7C4ED6009DA2E3 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		F304CFE02E7C4EF0009DA2E3 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		F304CFE42E7C4F30009DA2E3 /* ScheduleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleItem.swift; sourceTree = "<group>"; };
+		F304CFE62E7C50CC009DA2E3 /* CodableColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableColor.swift; sourceTree = "<group>"; };
+		F304CFEA2E7C5354009DA2E3 /* ScheduleCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCategory.swift; sourceTree = "<group>"; };
+		F304CFF22E7C5670009DA2E3 /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
+		F329ADEA2E7D541000E4DD05 /* ScheduleV2LogSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleV2LogSystem.swift; sourceTree = "<group>"; };
+		F34B50702E7C638800A04424 /* CalendarViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewMode.swift; sourceTree = "<group>"; };
+		F34B50722E7C64A300A04424 /* SidebarSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarSelection.swift; sourceTree = "<group>"; };
+		F34B50742E7C672A00A04424 /* DataSourceSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceSettingsViewModel.swift; sourceTree = "<group>"; };
+		F34B50762E7C680500A04424 /* CourseInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseInformation.swift; sourceTree = "<group>"; };
+		F34B50782E7C6C6600A04424 /* Permissions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Permissions.entitlements; sourceTree = "<group>"; };
 		F3BBBAEF2E7BFDB7002501DE /* ScheduleV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BBBB002E7BFDB8002501DE /* ScheduleV2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScheduleV2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BBBB0A2E7BFDB8002501DE /* ScheduleV2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScheduleV2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,47 +106,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F30270232E7C1947000E6FBD /* Modual */ = {
+		F304CFD52E7C4E54009DA2E3 /* Modual */ = {
 			isa = PBXGroup;
 			children = (
-				F302702B2E7C29F6000E6FBD /* EventKitService.swift */,
-				F302702D2E7C2A15000E6FBD /* ScheduleService.swift */,
-				F30270402E7C2BC6000E6FBD /* ScheduleItem.swift */,
-				F30270422E7C2BF7000E6FBD /* AppViewModel.swift */,
-				F30270482E7C2CBA000E6FBD /* SettingsInputView.swift */,
+				F304CFD62E7C4E67009DA2E3 /* GetScheduleProtocol.swift */,
+				F304CFD82E7C4E83009DA2E3 /* CalendarExporterProtocol.swift */,
+				F304CFDA2E7C4E9C009DA2E3 /* GetScheduleFormWebService.swift */,
+				F304CFDC2E7C4EBB009DA2E3 /* EventKitExporter.swift */,
+				F304CFDE2E7C4ED6009DA2E3 /* AppState.swift */,
+				F304CFE02E7C4EF0009DA2E3 /* ScheduleViewModel.swift */,
+				F304CFE42E7C4F30009DA2E3 /* ScheduleItem.swift */,
+				F304CFE62E7C50CC009DA2E3 /* CodableColor.swift */,
+				F304CFEA2E7C5354009DA2E3 /* ScheduleCategory.swift */,
+				F304CFF22E7C5670009DA2E3 /* Date+Helpers.swift */,
+				F34B50702E7C638800A04424 /* CalendarViewMode.swift */,
+				F34B50722E7C64A300A04424 /* SidebarSelection.swift */,
+				F34B50742E7C672A00A04424 /* DataSourceSettingsViewModel.swift */,
+				F34B50762E7C680500A04424 /* CourseInformation.swift */,
+				F329ADEA2E7D541000E4DD05 /* ScheduleV2LogSystem.swift */,
 			);
 			path = Modual;
-			sourceTree = "<group>";
-		};
-		F302703B2E7C2B3F000E6FBD /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				F302703C2E7C2B5D000E6FBD /* ModernUIComponents.swift */,
-				F302703E2E7C2B7E000E6FBD /* DateExtensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		F302704A2E7C3067000E6FBD /* ScheduleView */ = {
-			isa = PBXGroup;
-			children = (
-				F30270332E7C2AB7000E6FBD /* ScheduleView.swift */,
-				F302702F2E7C2A7B000E6FBD /* SidebarView.swift */,
-				F30270462E7C2C78000E6FBD /* AddScheduleItemView.swift */,
-				F302704B2E7C3152000E6FBD /* WeekCalendarView.swift */,
-				F302704D2E7C316D000E6FBD /* MonthCalendarView.swift */,
-				F302704F2E7C3181000E6FBD /* YearCalendarView.swift */,
-				F30270512E7C3491000E6FBD /* CalendarHeaderView.swift */,
-			);
-			path = ScheduleView;
 			sourceTree = "<group>";
 		};
 		F3BBBAE62E7BFDB7002501DE = {
 			isa = PBXGroup;
 			children = (
-				F302704A2E7C3067000E6FBD /* ScheduleView */,
-				F302703B2E7C2B3F000E6FBD /* Extensions */,
-				F30270232E7C1947000E6FBD /* Modual */,
+				F34B50782E7C6C6600A04424 /* Permissions.entitlements */,
+				F304CFD52E7C4E54009DA2E3 /* Modual */,
 				F3BBBAF12E7BFDB7002501DE /* ScheduleV2 */,
 				F3BBBB032E7BFDB8002501DE /* ScheduleV2Tests */,
 				F3BBBB0D2E7BFDB8002501DE /* ScheduleV2UITests */,
@@ -305,20 +294,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F30270472E7C2C78000E6FBD /* AddScheduleItemView.swift in Sources */,
-				F30270522E7C3491000E6FBD /* CalendarHeaderView.swift in Sources */,
-				F302702E2E7C2A15000E6FBD /* ScheduleService.swift in Sources */,
-				F302704E2E7C316D000E6FBD /* MonthCalendarView.swift in Sources */,
-				F30270432E7C2BF7000E6FBD /* AppViewModel.swift in Sources */,
-				F30270302E7C2A7B000E6FBD /* SidebarView.swift in Sources */,
-				F302704C2E7C3152000E6FBD /* WeekCalendarView.swift in Sources */,
-				F302702C2E7C29F6000E6FBD /* EventKitService.swift in Sources */,
-				F302703F2E7C2B7E000E6FBD /* DateExtensions.swift in Sources */,
-				F30270492E7C2CBA000E6FBD /* SettingsInputView.swift in Sources */,
-				F30270342E7C2AB7000E6FBD /* ScheduleView.swift in Sources */,
-				F30270502E7C3181000E6FBD /* YearCalendarView.swift in Sources */,
-				F302703D2E7C2B5D000E6FBD /* ModernUIComponents.swift in Sources */,
-				F30270412E7C2BC6000E6FBD /* ScheduleItem.swift in Sources */,
+				F34B50772E7C680500A04424 /* CourseInformation.swift in Sources */,
+				F304CFEB2E7C5354009DA2E3 /* ScheduleCategory.swift in Sources */,
+				F304CFDB2E7C4E9C009DA2E3 /* GetScheduleFormWebService.swift in Sources */,
+				F34B50712E7C638800A04424 /* CalendarViewMode.swift in Sources */,
+				F34B50752E7C672A00A04424 /* DataSourceSettingsViewModel.swift in Sources */,
+				F304CFDD2E7C4EBB009DA2E3 /* EventKitExporter.swift in Sources */,
+				F304CFF32E7C5670009DA2E3 /* Date+Helpers.swift in Sources */,
+				F34B50732E7C64A300A04424 /* SidebarSelection.swift in Sources */,
+				F304CFDF2E7C4ED6009DA2E3 /* AppState.swift in Sources */,
+				F304CFE52E7C4F30009DA2E3 /* ScheduleItem.swift in Sources */,
+				F304CFE12E7C4EF0009DA2E3 /* ScheduleViewModel.swift in Sources */,
+				F304CFD72E7C4E67009DA2E3 /* GetScheduleProtocol.swift in Sources */,
+				F329ADEB2E7D541000E4DD05 /* ScheduleV2LogSystem.swift in Sources */,
+				F304CFE72E7C50CC009DA2E3 /* CodableColor.swift in Sources */,
+				F304CFD92E7C4E83009DA2E3 /* CalendarExporterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +473,7 @@
 				DEVELOPMENT_TEAM = 8NQM3NZLB8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "此应用需要访问您的日历，以便将您的日程信息导入其中。";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -509,6 +500,7 @@
 				DEVELOPMENT_TEAM = 8NQM3NZLB8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "此应用需要访问您的日历，以便将您的日程信息导入其中。";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
