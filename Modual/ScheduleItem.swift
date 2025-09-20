@@ -5,12 +5,12 @@ import SwiftData
 @Model
 final class ScheduleItem {
     @Attribute(.unique) var id: UUID
-    var title: String
-    var location: String
-    var teacher: String?
-    var startDate: Date
-    var endDate: Date
-    var notes: String?
+    var title: String    // 写入系统日历的标题
+    var location: String  // 写入系统日历的事件发生地点
+    var teacher: String?  // 教学老师
+    var startDate: Date  // 课程课程开始事件
+    var endDate: Date    // 课程结束时间
+    var notes: String?   // 备注
 
     // SwiftData 关系：一个日程项目属于一个分类
     var category: ScheduleCategory?

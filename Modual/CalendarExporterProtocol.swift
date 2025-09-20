@@ -14,6 +14,6 @@ protocol CalendarExporterProtocol {
     /// 并发地将一组日程项目添加到目标日历。
     /// - Parameter items: 需要被导出的日程项目。
     /// - Returns: 一个元组，包含成功和失败的计数。
-    func export(items: [ScheduleItem]) async -> (successCount: Int, failureCount: Int)
+    func exportEvent(items: [ScheduleItem]) async throws -> (successCount: Int, failureCount: Int)
 }
 

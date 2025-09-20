@@ -9,7 +9,7 @@ class ScheduleViewModel: ObservableObject {
 
     private let modelContext: ModelContext
     private let scheduleProvider: GetScheduleProtocol = GetScheduleFormWebService()
-    private let calendarExporter: CalendarExporterProtocol = EventKitExporter()
+    private let calendarExporter: CalendarExporterProtocol = EventKitExportManagement()
 
     init(modelContext: ModelContext) {
         self.modelContext = modelContext
@@ -74,14 +74,25 @@ class ScheduleViewModel: ObservableObject {
             guard !itemsToExport.isEmpty else {
                 showAlert(message: "没有可供导出的日程。"); return
             }
+            do {
+                let (successCount, failureCount) = try await calendarExporter.exportEvent(items: itemsToExport)
 
-            let (successCount, failureCount) = await calendarExporter.export(items: itemsToExport)
-
-            if successCount > 0 {
-                let failureMessage = failureCount > 0 ? " \(failureCount) 个失败。" : ""
-                showAlert(message: "成功导入 \(successCount) 个项目。" + failureMessage)
-            } else {
-                showAlert(message: "导入项目失败。请检查日历权限。")
+                if successCount > 0 {
+                    let failureMessage = failureCount > 0 ? " \(failureCount) 个失败。" : ""
+                    showAlert(message: "成功导入 \(successCount) 个项目。" + failureMessage)
+                    
+                } else {
+                    showAlert(message: "导入项目失败。请检查日历权限。")
+                }
+                
+            } catch EventKitExportErrror.permissionDenied {
+                showAlert(message: "没有执行权限")
+                
+            } catch EventKitExportErrror.restricted {
+                showAlert(message: "权限被限制。")
+                
+            } catch EventKitExportErrror.systemVersionIsLow {
+                showAlert(message: "系统版本过低！")
             }
         } catch {
             showAlert(message: "导出失败: \(error.localizedDescription)")
