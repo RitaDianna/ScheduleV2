@@ -344,12 +344,6 @@
 import EventKit
 import SwiftUI
 
-enum EventKitExportErrror: Error {
-    case permissionDenied // 没有权限
-    case restricted // 受到限制
-    case systemVersionIsLow // 版本过低
-}
-
 /**
  *  EventKitExportManagement 用于权限获取并将日程信息导入到系统日历中。
  */
@@ -365,19 +359,19 @@ struct EventKitExportManagement: CalendarExporterProtocol {
             if #available(macOS 14.0, *) {
                 return await performExport(items: items)
             } else {
-                throw EventKitExportErrror.systemVersionIsLow
+                throw ScheduleV2Error.systemVersionIsLow
             }
 
         case .notDetermined: // 如果用户未授权那么就请求用户授权
             if await requestAccess() {
                 return await performExport(items: items)
             } else {
-                throw EventKitExportErrror.permissionDenied // 在UI中捕获这个错误并弹出提示弹窗
+                throw ScheduleV2Error.permissionDenied
             }
 
         case .denied, .restricted: // 如果用户拒绝或者权限受到限制，例如设置中的家长管理
             ScheduleV2LogSystem.shared.log("日历访问权限已被拒绝或受限!", level: .ERROR, module: "struct/EventKitExportManagement.")
-            throw EventKitExportErrror.restricted
+            throw ScheduleV2Error.restricted
 
         @unknown default:
             // 处理未来可能出现的新 case。
@@ -399,7 +393,7 @@ struct EventKitExportManagement: CalendarExporterProtocol {
                     event.endDate = item.endDate
                     event.calendar = self.eventStore.defaultCalendarForNewEvents // 将以上信息写入系统日历
                     
-                    Debug.log(event.title ?? "", event.calendar ?? "")
+                    Debug.log(event.title ?? "", event.startDate ?? "" ,event.calendar ?? "")
 
                     do {
                         try self.eventStore.save(event, span: .thisEvent)

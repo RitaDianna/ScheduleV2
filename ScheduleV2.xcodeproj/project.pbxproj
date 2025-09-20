@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F3045AC32E7ED76A00F87425 /* ScheduleV2Debugl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3045AC22E7ED76A00F87425 /* ScheduleV2Debugl.swift */; };
+		F3045AC52E7EDF8300F87425 /* ScheduleV2Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3045AC42E7EDF8300F87425 /* ScheduleV2Error.swift */; };
 		F304CFD72E7C4E67009DA2E3 /* GetScheduleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304CFD62E7C4E67009DA2E3 /* GetScheduleProtocol.swift */; };
 		F304CFD92E7C4E83009DA2E3 /* CalendarExporterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304CFD82E7C4E83009DA2E3 /* CalendarExporterProtocol.swift */; };
 		F304CFDB2E7C4E9C009DA2E3 /* GetScheduleFormWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304CFDA2E7C4E9C009DA2E3 /* GetScheduleFormWebService.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		F3045AC22E7ED76A00F87425 /* ScheduleV2Debugl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleV2Debugl.swift; sourceTree = "<group>"; };
+		F3045AC42E7EDF8300F87425 /* ScheduleV2Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleV2Error.swift; sourceTree = "<group>"; };
 		F304CFD62E7C4E67009DA2E3 /* GetScheduleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetScheduleProtocol.swift; sourceTree = "<group>"; };
 		F304CFD82E7C4E83009DA2E3 /* CalendarExporterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExporterProtocol.swift; sourceTree = "<group>"; };
 		F304CFDA2E7C4E9C009DA2E3 /* GetScheduleFormWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetScheduleFormWebService.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				F34B50742E7C672A00A04424 /* DataSourceSettingsViewModel.swift */,
 				F34B50762E7C680500A04424 /* CourseInformation.swift */,
 				F329ADEA2E7D541000E4DD05 /* ScheduleV2LogSystem.swift */,
+				F3045AC42E7EDF8300F87425 /* ScheduleV2Error.swift */,
 			);
 			path = Modual;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				F304CFDD2E7C4EBB009DA2E3 /* EventKitExportManagement.swift in Sources */,
 				F304CFF32E7C5670009DA2E3 /* Date+Helpers.swift in Sources */,
 				F34B50732E7C64A300A04424 /* SidebarSelection.swift in Sources */,
+				F3045AC52E7EDF8300F87425 /* ScheduleV2Error.swift in Sources */,
 				F304CFDF2E7C4ED6009DA2E3 /* AppState.swift in Sources */,
 				F304CFE52E7C4F30009DA2E3 /* ScheduleItem.swift in Sources */,
 				F304CFE12E7C4EF0009DA2E3 /* ScheduleViewModel.swift in Sources */,

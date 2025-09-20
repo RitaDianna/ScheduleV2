@@ -85,13 +85,13 @@ class ScheduleViewModel: ObservableObject {
                     showAlert(message: "导入项目失败。请检查日历权限。")
                 }
                 
-            } catch EventKitExportErrror.permissionDenied {
+            } catch ScheduleV2Error.permissionDenied {
                 showAlert(message: "没有执行权限")
                 
-            } catch EventKitExportErrror.restricted {
+            } catch ScheduleV2Error.restricted {
                 showAlert(message: "权限被限制。")
                 
-            } catch EventKitExportErrror.systemVersionIsLow {
+            } catch ScheduleV2Error.systemVersionIsLow {
                 showAlert(message: "系统版本过低！")
             }
         } catch {
