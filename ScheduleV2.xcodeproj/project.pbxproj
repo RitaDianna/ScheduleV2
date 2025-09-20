@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3045AC32E7ED76A00F87425 /* ScheduleV2Debugl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3045AC22E7ED76A00F87425 /* ScheduleV2Debugl.swift */; };
 		F304CFD72E7C4E67009DA2E3 /* GetScheduleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304CFD62E7C4E67009DA2E3 /* GetScheduleProtocol.swift */; };
 		F304CFD92E7C4E83009DA2E3 /* CalendarExporterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304CFD82E7C4E83009DA2E3 /* CalendarExporterProtocol.swift */; };
 		F304CFDB2E7C4E9C009DA2E3 /* GetScheduleFormWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304CFDA2E7C4E9C009DA2E3 /* GetScheduleFormWebService.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F3045AC22E7ED76A00F87425 /* ScheduleV2Debugl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleV2Debugl.swift; sourceTree = "<group>"; };
 		F304CFD62E7C4E67009DA2E3 /* GetScheduleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetScheduleProtocol.swift; sourceTree = "<group>"; };
 		F304CFD82E7C4E83009DA2E3 /* CalendarExporterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExporterProtocol.swift; sourceTree = "<group>"; };
 		F304CFDA2E7C4E9C009DA2E3 /* GetScheduleFormWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetScheduleFormWebService.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F3045AC12E7ED73F00F87425 /* DeBug */ = {
+			isa = PBXGroup;
+			children = (
+				F3045AC22E7ED76A00F87425 /* ScheduleV2Debugl.swift */,
+			);
+			path = DeBug;
+			sourceTree = "<group>";
+		};
 		F304CFD52E7C4E54009DA2E3 /* Modual */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +141,7 @@
 		F3BBBAE62E7BFDB7002501DE = {
 			isa = PBXGroup;
 			children = (
+				F3045AC12E7ED73F00F87425 /* DeBug */,
 				F34B50782E7C6C6600A04424 /* Permissions.entitlements */,
 				F304CFD52E7C4E54009DA2E3 /* Modual */,
 				F3BBBAF12E7BFDB7002501DE /* ScheduleV2 */,
@@ -295,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F34B50772E7C680500A04424 /* CourseInformation.swift in Sources */,
+				F3045AC32E7ED76A00F87425 /* ScheduleV2Debugl.swift in Sources */,
 				F304CFEB2E7C5354009DA2E3 /* ScheduleCategory.swift in Sources */,
 				F304CFDB2E7C4E9C009DA2E3 /* GetScheduleFormWebService.swift in Sources */,
 				F34B50712E7C638800A04424 /* CalendarViewMode.swift in Sources */,
@@ -588,7 +600,7 @@
 				F3BBBB132E7BFDB8002501DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F3BBBB142E7BFDB8002501DE /* Build configuration list for PBXNativeTarget "ScheduleV2" */ = {
 			isa = XCConfigurationList;
@@ -597,7 +609,7 @@
 				F3BBBB162E7BFDB8002501DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F3BBBB172E7BFDB8002501DE /* Build configuration list for PBXNativeTarget "ScheduleV2Tests" */ = {
 			isa = XCConfigurationList;
@@ -606,7 +618,7 @@
 				F3BBBB192E7BFDB8002501DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F3BBBB1A2E7BFDB8002501DE /* Build configuration list for PBXNativeTarget "ScheduleV2UITests" */ = {
 			isa = XCConfigurationList;
@@ -615,7 +627,7 @@
 				F3BBBB1C2E7BFDB8002501DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

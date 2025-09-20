@@ -398,6 +398,8 @@ struct EventKitExportManagement: CalendarExporterProtocol {
                     event.startDate = item.startDate
                     event.endDate = item.endDate
                     event.calendar = self.eventStore.defaultCalendarForNewEvents // 将以上信息写入系统日历
+                    
+                    Debug.log(event.title ?? "", event.calendar ?? "")
 
                     do {
                         try self.eventStore.save(event, span: .thisEvent)
@@ -417,6 +419,7 @@ struct EventKitExportManagement: CalendarExporterProtocol {
         }
     }
 
+    
     // 向用户询问日历访问权限
     private func requestAccess() async -> Bool {
         do {
