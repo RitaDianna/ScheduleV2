@@ -1,0 +1,93 @@
+# Created by https://www.toptal.com/developers/gitignore/api/xcode,swift
+# Edit at https://www.toptal.com/developers/gitignore?templates=xcode,swift
+
+### Swift ###
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+.build/
+.swiftpm/
+
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Modern/Xcode.gitignore,
+# and Swift.gitignore if you edit this file.
+
+## User-specific files
+*.xcuserdatad/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.playground/
+
+## Build generated
+build/
+Build/
+DerivedData/
+*.app
+*.ipa
+
+## Various settings
+*.xcscheme
+xcuserdata/
+
+## Other
+*.xctestrun
+*.xcresult
+*.xcarchive
+*.plist
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+# Pods/
+# Podfile.lock
+
+### Xcode ###
+# Xcode temporary files
+*~.nib/
+*~.xib/
+
+# Xcode private settings
+*.pbxuser
+*.mode1v3
+*.mode2v3
+
+# Xcode build products
+*.moved-aside
+*.pdb
+*.xccheckout
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+Carthage/Build
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# End of https://www.toptal.com/developers/gitignore/api/xcode,swift
